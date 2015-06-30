@@ -5,14 +5,16 @@ local bump = require 'lib.bump'
 local sti = require 'lib.sti'
 local Camera = require 'lib.camera'
 -- imported classes
-local Player = require 'player'
-local Block = require 'block'
+local Player = require 'entities.player'
+local Block = require 'entities.block'
+local DestroyableBlock = require 'entities.destroyable_block'
 
 -- global variables
 local tileSize = 70
 local cameraScale = 2
 
 local blocks = {}
+local destroyableBlocks = {}
 
 function Play:enteredState()
     print("entering the play screen")
@@ -40,6 +42,8 @@ function Play:enteredState()
         end
     end
     
+    table.insert(destroyableBlocks, DestroyableBlock:new(world,1200,1000,70))
+    table.insert(destroyableBlocks, DestroyableBlock:new(world,2000,1000,70))
     --[[
     -- Create the main layer
     local mainLayer = map.layers["Main Layer"]
@@ -65,7 +69,13 @@ function Play:update(dt)
     map:update(dt)
     player:update(dt)
     self:movePlayer(player, dt)
-    
+    for _, dblock in ipairs(destroyableBlocks) do
+        dblock:update(dt)
+        if dblock.toDestroy then
+            dblock:destroy()
+            table.remove(destroyableBlocks,_)
+        end
+    end
     -- reposition the camera (do this before draw() is called, to reduce jankiness)
     camera:setPosition(player.x + player.w/2 - sw/2*cameraScale, player.y + player.h/2 - sh/2*cameraScale)
 end
@@ -74,7 +84,7 @@ function Play:movePlayer(player, dt)
     -- deal with the collisions
     local goalX, goalY = player.x + player.vx * dt, player.y + player.vy * dt
     local actualX, actualY, cols, length = world:move(player, goalX, goalY)
-  player.x, player.y = actualX, actualY
+    player.x, player.y = actualX, actualY
     for i=1,length do
         print('collided with ' .. tostring(cols[i].other))
     end
@@ -92,6 +102,9 @@ function Play:draw()
     
     for _, block in ipairs(blocks) do
         block:draw()
+    end
+    for _, dblock in ipairs(destroyableBlocks) do
+        dblock:draw()
     end
     
     camera:setScale(cameraScale,cameraScale)
