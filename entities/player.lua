@@ -40,6 +40,9 @@ function Player:update(dt)
             table.remove(self.bullets, _)
         end
     end
+    love.audio.setPosition(self.x,self.y,0)
+    love.audio.setDirection(self.direction.x, self.direction.y, 0)
+    love.audio.setVelocity(self.vx,self.vy,0)
 end
 
 function Player:changeVelocityByKeys(dt)
@@ -108,7 +111,7 @@ function Player:mousepressed(x, y, button)
     if button == 'l' then
         local cx, cy = self:getCenter()
         local gunX, gunY = self:gunVector():expand()
-        table.insert(self.bullets, Bullet:new(self.world, cx + gunX, cy + gunY, 15, self.direction, 3000))
+        table.insert(self.bullets, Bullet:new(self.world, cx + gunX, cy + gunY, 15, self.direction, 100000))
     end
 end
 

@@ -8,10 +8,57 @@
 	"buffers":
 	[
 		{
-			"file": "assets/maps/map01.lua",
+			"file": "entities/gun.lua",
 			"settings":
 			{
-				"buffer_size": 4791,
+				"buffer_size": 158,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "audio_manager.lua",
+			"settings":
+			{
+				"buffer_size": 766,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "entities/player.lua",
+			"settings":
+			{
+				"buffer_size": 4646,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vector.lua",
+			"settings":
+			{
+				"buffer_size": 1011,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "main.lua",
+			"settings":
+			{
+				"buffer_size": 672,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "entities/bullet.lua",
+			"settings":
+			{
+				"buffer_size": 1227,
 				"line_ending": "Windows"
 			}
 		}
@@ -128,10 +175,12 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Phil/Desktop/platformer"
+		"/C/Users/Phil/Documents/GitHub/platformer-love2d",
+		"/C/Users/Phil/Documents/GitHub/platformer-love2d/entities"
 	],
 	"file_history":
 	[
+		"/C/Users/Phil/Documents/GitHub/platformer-love2d/assets/maps/map01.lua",
 		"/C/Users/Phil/Desktop/platformer/main.lua",
 		"/E/download/PlatformerPart1 (1)/main.lua",
 		"/C/Users/Phil/AppData/Roaming/Sublime Text 3/Packages/Lua Love/LuaLove.sublime-build",
@@ -156,7 +205,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -170,6 +219,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"direction"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -187,24 +237,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "assets/maps/map01.lua",
+					"file": "entities/gun.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4791,
+						"buffer_size": 158,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								172,
-								172
+								87,
+								87
 							]
 						],
 						"settings":
@@ -215,7 +265,181 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "audio_manager.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 766,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								164,
+								164
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Lua/Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "entities/player.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4646,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								661,
+								661
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "vector.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1011,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "main.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 672,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								667,
+								667
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "entities/bullet.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1227,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								476,
+								476
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -223,7 +447,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -260,11 +484,11 @@
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "Packages/Lua Love/LuaLove.sublime-build",
+	"pinned_build_system": "Packages/User/Love2D.sublime-build",
 	"project": "platformer.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
